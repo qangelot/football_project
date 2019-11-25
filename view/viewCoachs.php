@@ -14,7 +14,10 @@
             <p class="card-text"> Pays <?=$coach['nationality']?> <br />
                                   Né à : <?= $coach['birthday_date']?>, le <?= $coach['birthday_place']?></p>
           </div>
+        <div class="encart">
+        <img class="card-img-bottom" src="<?=$coach['logo']?>" alt="logo">
         </div>
+      </div>
       </div>
     <?php } ?>
   </div>

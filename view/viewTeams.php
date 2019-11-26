@@ -7,12 +7,13 @@
 
       <div class="col-md-3 mt-4">
 
-        <div class="card text-white bg-dark" style="width: 100%;">
+        <div class="card text-white bg-dark shadow-lg rounded" style="width: 100%;">
         <img class="card-img-top" src="<?=$team['logo']?>" alt="logo">
           <div class="card-body">
             <h5 class="card-title"><?=$team['name']?></h5>
             <p class="card-text">Aka <?=$team['short_name']?> <br />
                                  Adresse : <?=nl2br($team['adress'])?></p>
+            <a href="?route=team&id=<?=$team['id']; ?>" class="btn btn-primary mb-2">Détails</a> <br />
             <a href="//<?=$team['website']?>" class="btn btn-primary"><?=$team['website']?></a>
           </div>
         </div>

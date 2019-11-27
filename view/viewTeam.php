@@ -21,18 +21,23 @@
       <thead>
         <tr>
           <th scope="col">Nom</th>
-          <th scope="col">Pays</th>
-          <th scope="col">Né le</th>
-          <th scope="col">Poste</th>
         </tr>
       </thead>
       <tbody>
         <?php foreach ($players as $key => $player) { ?>
         <tr>
-          <td><a href="?route=player&id=<?=$player['id'];?>"><?=$player['name']?></a></td>
-          <td><?=$player['nationality']?></td>
-          <td><?=(new DateTime($player['birthday_date']))->format('d/m/Y')?></td>
-          <td><?=$player['poste']?></td>
+          <td>
+            <div class="container">
+              <button data-toggle="modal" href="viewPlayer.php" data-target="#infos" class="btn btn-primary">
+                <?= $player['name'] ?>
+              </button>
+              <div class="modal fade" id="infos">
+                <div class="modal-dialog">
+                  <div class="modal-content"></div>
+                </div>
+              </div>
+              </div>
+          </td>
         </tr>
         <?php } ?>
       </tbody>

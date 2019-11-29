@@ -1,6 +1,6 @@
 body{
   background-color: rgb(225, 232, 218);
-  padding-top: 70px;
+  padding-top: 100px;
 }
 .navbar{
   height: 70px;
@@ -28,4 +28,17 @@ width : 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.modal-header{
+  background-color: rgba(143, 181, 127,0.4);
+}
+
+.modal-body{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(225, 232, 218);
+  font-size: 1.4rem;
+  line-height : 35px;
 }

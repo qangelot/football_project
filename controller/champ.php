@@ -1,5 +1,5 @@
 <?php
-require('model/modelTeam.php');
+require('model/modelChamp.php');
 
 function listTeam($idTeam) {
   $team = getTeam($idTeam);
@@ -7,5 +7,5 @@ function listTeam($idTeam) {
   $matchsPlayed = getMachsPlayed($idTeam);
   $matchsNotPlayed = getMachsNotPlayed($idTeam);
   $coach = getCoach($idTeam);
-  require('view/viewTeam.php');
+  require('view/viewChamp.php');
 }

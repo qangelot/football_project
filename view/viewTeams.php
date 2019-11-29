@@ -13,8 +13,7 @@
             <h5 class="card-title"><?=$team['name']?></h5>
             <p class="card-text">Aka <?=$team['short_name']?> <br />
                                  Adresse : <?=nl2br($team['adress'])?></p>
-            <a href="?route=team&id=<?=$team['id']; ?>" class="btn btn-primary mb-2">Détails</a> <br />
-            <a href="//<?=$team['website']?>" class="btn btn-primary"><?=$team['website']?></a>
+            <a href="./team/<?=$team['id']; ?>" class="btn btn-primary mb-2">Détails</a> <br />
           </div>
         </div>
       </div>

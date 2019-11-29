@@ -1,6 +1,8 @@
 <?php
+$data = explode('/', substr($_SERVER['REQUEST_URI'], 1));
+array_shift($data); //rewritting url
 
-$route = isset($_GET['route']) ? $_GET['route'] : 'teams';
+$route = $data[0] ? $data[0] : 'teams';
 
 if ($route === 'teams') {
   require('controller/teams.php');
@@ -10,10 +12,8 @@ if ($route === 'teams') {
   listCoachs();
 } elseif ($route === 'team') {
   require('controller/team.php');
-  $idTeam = $_GET['id'];
+  $idTeam = $data[1];
   listTeam($idTeam);
-} elseif ($route === 'player') {
-  require('controller/players.php');
-  $idPlayer = $_GET['id'];
-  listPlayers ($idPlayer);
+} elseif ($route === 'champ') {
+  require('controller/champ.php');
 }
